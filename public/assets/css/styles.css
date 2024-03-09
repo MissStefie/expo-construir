@@ -1,0 +1,20 @@
+body {
+    background-color: #9b1111;
+}
+
+.card-body {
+    background-color: white;
+    width: 551px;
+    height: 464px;
+}
+
+.card-title {
+    margin-top: 50px;
+    color: white;
+    text-align: center;
+}
+
+.btn{
+    color: white;
+    background-color: #9b1111;
+}

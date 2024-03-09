@@ -12,12 +12,26 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
     @yield('styles')
     <link rel="stylesheet" href="{{ asset('assets/css/custom.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/styles.css') }}">
 
 </head>
 
 <body class="layout-boxed">
     <div class="wrapper">
-        @include('form')
+        <div class="container">
+            <div class="row justify-content-center align-items-center">
+                <div class="col-md-5">
+                    @include('title')
+                </div>
+            </div>
+            <div class="row justify-content-center align-items-center">
+                <div class="col-md-6">
+                    <div class="card">
+                        @include('form')
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
     <script src="{{ asset('assets/lte/plugins/jquery/jquery.min.js') }}"></script>
