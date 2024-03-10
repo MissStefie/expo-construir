@@ -15,5 +15,5 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [InicioController::class, 'index']);
+Route::get('/', [VisitorController::class, 'index']);
 Route::post('/', [VisitorController::class, 'registrar'])->name('registrar');
