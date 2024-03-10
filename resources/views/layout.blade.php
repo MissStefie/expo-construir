@@ -11,12 +11,12 @@
     <link rel="stylesheet" href="{{ asset('assets/lte/dist/css/adminlte.min.css') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
     @yield('styles')
-    <link rel="stylesheet" href="{{ asset('assets/css/custom.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/styles.css') }}">
 
 </head>
 
 <body class="layout-boxed">
+    @include('errores')
     <div class="wrapper">
         <div class="container">
             <div class="row justify-content-center align-items-center">
@@ -26,9 +26,12 @@
             </div>
             <div class="row justify-content-center align-items-center">
                 <div class="col-md-6">
-                    <div class="card">
-                        @include('form')
-                    </div>
+                    <form action="{{ route('registrar') }}" method="POST" autocomplete="off">
+                        @csrf
+                        <div class="card">
+                            @include('formulario')
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
@@ -39,8 +42,6 @@
     <script src="{{ asset('assets/lte/plugins/moment/moment.min.js') }}"></script>
     <script src="{{ asset('assets/lte/plugins/inputmask/jquery.inputmask.min.js') }}"></script>
     <script src="{{ asset('assets/lte/dist/js/adminlte.min.js') }}"></script>
-    <script src="{{ asset('assets/js/jquery-validation/jquery.validate.min.js') }}"></script>
-    <script src="{{ asset('assets/js/jquery-validation/localization/messages_es.min.js') }}"></script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
 

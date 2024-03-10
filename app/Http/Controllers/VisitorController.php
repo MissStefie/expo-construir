@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\ValidacionForm;
+use App\Models\Visitor;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Log;
 
 class VisitorController extends Controller
 {
@@ -25,9 +28,11 @@ class VisitorController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function guardar(Request $request)
+    public function registrar(ValidacionForm $request)
     {
-        //
+        Log::info('Se recibió una solicitud para registrar un visitante.');
+        Visitor::create($request->all());
+        return redirect('/')->with('mensaje', 'Visitante registrado con exito');
     }
 
     /**

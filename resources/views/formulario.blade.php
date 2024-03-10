@@ -5,7 +5,7 @@
             <div class="input-group-prepend">
                 <span class="input-group-text"><i class="fas fa-user"></i></span>
             </div>
-            <input type="text" class="form-control" placeholder="Ingrese el nombre">
+            <input type="text" name="nombre" id="nombre" class="form-control" placeholder="Ingrese el nombre">
         </div>
     </div>
 
@@ -15,8 +15,8 @@
             <div class="input-group-prepend">
                 <span class="input-group-text"><i class="fas fa-phone"></i></span>
             </div>
-            <input type="text" class="form-control" placeholder="Ingrese el número telefónico"
-                data-inputmask='"mask": "(9999) 999-999"' data-mask>
+            <input type="text" name="telefono" id="telefono" class="form-control"
+                placeholder="Ingrese el número telefónico" data-inputmask='"mask": "(9999) 999-999"' data-mask>
         </div>
     </div>
 
@@ -26,9 +26,10 @@
             <div class="input-group-prepend">
                 <span class="input-group-text"><i class="fas fa-envelope"></i></span>
             </div>
-            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Ingrese el correo">
+            <input type="email" name="correo" id="correo" class="form-control" id="exampleInputEmail1"
+                placeholder="Ingrese el correo">
         </div>
     </div>
 
-    <button class="btn" onclick="stepper.next()">Inscribirme</button>
+    <button type="submit" class="btn">Inscribirme</button>
 </div>
