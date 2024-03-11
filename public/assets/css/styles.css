@@ -14,7 +14,12 @@ body {
     text-align: center;
 }
 
-.btn{
+.btn {
     color: white;
     background-color: #9b1111;
+}
+
+.icono {
+    font-size: 10em;
+    color: #9b1111;
 }

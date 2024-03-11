@@ -15,19 +15,11 @@ class VisitorController extends Controller
         return view('inicio');
     }
 
-    
-    public function crear()
-    {
-        //
-    }
-    
-    
     public function registrar(ValidacionForm $request)
     {
         Log::info('Se recibió una solicitud para registrar un visitante.');
         Visitor::create($request->all());
-        return redirect()->route('confirmacion')->with('mensaje', 'Visitante registrado con éxito');
-        //return redirect('/')->with('mensaje', 'Visitante registrado con exito');
+        return redirect()->route('confirmacion');
     }
 
     public function confirmacion()
@@ -35,21 +27,4 @@ class VisitorController extends Controller
         return view('confirmacion/ventana');
     }
 
-   
-    public function editar(string $id)
-    {
-        //
-    }
-
-    
-    public function actualizar(Request $request, string $id)
-    {
-        //
-    }
-
-    
-    public function eliminar(string $id)
-    {
-        //
-    }
 }
